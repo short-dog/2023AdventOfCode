@@ -19,8 +19,8 @@ private:
 
     std::string minString = "min";
     std::string maxString = "max";
-    std::string a;
-    std::string calibrationString;
+    std::string a = "empty";
+    std::string calibrationString = "empty";
 
     int calibrationValue = 0;
 

@@ -37,6 +37,10 @@
                 if (auto found = a.find(partOneKey); found!=std::string::npos)
                     stringMap.try_emplace(found, partOneKey);
             }
+            for (auto partOneKey : partOneKeys) {
+                if (auto found = a.rfind(partOneKey); found!=std::string::npos)
+                    stringMap.try_emplace(found, partOneKey);
+            }
             minString = stringMap.begin()->second;
             maxString = stringMap.rbegin()->second;
             calibrationString = minString + maxString;
@@ -51,6 +55,10 @@
         for (const auto& a : calibrationData) {
             for (auto partTwoKey : partTwoKeys) {
                 if (const auto found = a.find(partTwoKey); found!=std::string::npos)
+                    stringMap.try_emplace(found, partTwoKey);
+            }
+            for (auto partTwoKey : partTwoKeys) {
+                if (const auto found = a.rfind(partTwoKey); found!=std::string::npos)
                     stringMap.try_emplace(found, partTwoKey);
             }
             minString = stringMap.begin()->second;
