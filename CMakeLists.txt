@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.27)
+project(2023AOC)
+
+set(CMAKE_CXX_STANDARD 23)
+
+add_executable(2023AOC main.cpp
+        src/Day1.cpp
+        src/Day1.h)
