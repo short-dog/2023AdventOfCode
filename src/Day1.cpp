@@ -11,7 +11,7 @@
 #include <vector>
 
     void Day1::storeData(){
-        std::ifstream file("/Users/short/CLionProjects/2023AOC/src/Day1Data.csv");
+        std::ifstream file("/Users/short/CLionProjects/2023AOC/src/Day1Data.txt");
         if (!file.is_open()) {
             std::cerr << "Error opening file." << std::endl;
         }
@@ -19,7 +19,7 @@
         while (std::getline(file, line)) {
             std::istringstream ss(line);
             std::string cell;
-            std::getline(ss, cell, ',');
+            std::getline(ss, cell, '\n');
             calibrationData.push_back(cell);
         }
         file.close();
@@ -72,9 +72,10 @@
         }
         std::cout << "Part Two Total: " << total << std::endl;
     }
-    void Day1::runCalibration(){
-        storeData();
-        partOne();
-        partTwo();
+    void Day1::runDay1(){
+        Day1 day1;
+        day1.storeData();
+        day1.partOne();
+        day1.partTwo();
     }
 

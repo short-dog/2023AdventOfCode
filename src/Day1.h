@@ -10,11 +10,15 @@
 
 class Day1 {
 public:
-    void runCalibration();
+    static void runDay1();
+
 private:
     void storeData();
+
     void convertToNumber(std::string&word);
+
     void partOne();
+
     void partTwo();
 
     std::string minString = "min";
