@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_executable(2023AOC main.cpp
         src/Day1.cpp
-        src/Day1.h)
+        src/Day1.h
+        src/Day2.cpp
+        src/Day2.h)
