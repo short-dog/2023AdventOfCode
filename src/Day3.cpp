@@ -8,7 +8,6 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
-#include <thread>
 
 void Day3::runDay3() {
     Day3 day3;

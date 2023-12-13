@@ -9,7 +9,7 @@
 #include <sstream>
 
 void Day2::getData() {
-    std::ifstream file ("/Users/short/CLionProjects/2023AOC/src/Game2Data.txt");
+    std::ifstream file ("/Users/short/CLionProjects/2023AOC/src/Day2Data.txt");
     while(!file.is_open()) {
         std::cerr << "File error." << std::endl;
     }
@@ -147,7 +147,7 @@ void Day2::clearData() {
 }
 void Day2::printTotal() {
     std::cout << "Part 1 Result: " << total << std::endl;
-    std::cout << "Part 2 Result: " << total2 << std::endl;
+    std::cout << "Part 2 Result: " << total2 << "\n" << std::endl;
 }
 void Day2::calcCubesNeeded() {
     int redNeeded = (cubesNeeded.find("red")->second);

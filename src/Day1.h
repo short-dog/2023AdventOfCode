@@ -31,7 +31,8 @@ private:
 
     std::vector<std::string> calibrationData;
     std::vector<std::string> partOneKeys = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
-    std::vector<std::string> partTwoKeys = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "one", "two", "three", "four", "five", "six","seven", "eight", "nine"};
+    std::vector<std::string> partTwoKeys = {"1", "2", "3", "4", "5", "6", "7", "8", "9",
+        "one", "two", "three", "four", "five", "six","seven", "eight", "nine"};
 
     std::map<size_t, std::string> stringMap;
     const std::map<std::string, std::string> wordToNumber = {

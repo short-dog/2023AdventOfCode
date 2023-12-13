@@ -6,8 +6,9 @@
 
 int main(){
     auto start = std::chrono::high_resolution_clock::now();
-    //Day1::runDay1();
-    //Day2::runDay2();
+
+    Day1::runDay1();
+    Day2::runDay2();
     Day3::runDay3();
 
     auto end = std::chrono::high_resolution_clock::now();

@@ -4,7 +4,6 @@
 
 #ifndef DAY3_H
 #define DAY3_H
-#include <map>
 #include <string>
 #include <vector>
 
@@ -16,8 +15,6 @@ public:
     void partOne();
 
     std::string engineSchematic;
-    std::vector<std::string> gameData;
-
     int partOneTotal = 0;
 };
 
