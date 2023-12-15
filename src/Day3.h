@@ -14,8 +14,12 @@ public:
     void getData();
     void partOne();
 
+    void partTwo();
+
+    std::vector<std::string> engineParts;
     std::string engineSchematic;
     int partOneTotal = 0;
+    int partTwoTotal = 0;
 };
 
 

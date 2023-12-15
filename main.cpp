@@ -4,7 +4,7 @@
 #include <chrono>
 #include <iostream>
 
-int main(){
+int main() {
     auto start = std::chrono::high_resolution_clock::now();
 
     Day1::runDay1();
@@ -12,8 +12,8 @@ int main(){
     Day3::runDay3();
 
     auto end = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
     std::cout << duration.count() << std::endl;
 
-    return 1;
+    return 0;
 }
