@@ -48,7 +48,7 @@
             total += calibrationValue;
             stringMap.clear();
         }
-            std::cout << "Part One Total: " << total << std::endl;
+            std::cout << "Day 1 Part 1 Total: " << total << std::endl;
     }
     void Day1::partTwo() {
         int total = 0;
@@ -70,7 +70,7 @@
             total += calibrationValue;
             stringMap.clear();
         }
-        std::cout << "Part Two Total: " << total << std::endl;
+        std::cout << "Day 1 Part 2 Total: " << total << std::endl;
     }
     void Day1::runDay1(){
         Day1 day1;

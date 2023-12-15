@@ -146,8 +146,8 @@ void Day2::clearData() {
     gameParseList.clear();
 }
 void Day2::printTotal() {
-    std::cout << "Part 1 Result: " << total << std::endl;
-    std::cout << "Part 2 Result: " << total2 << "\n" << std::endl;
+    std::cout << "Day 2 Part 1 Result: " << total << std::endl;
+    std::cout << "Day 2 Part 2 Result: " << total2 << std::endl;
 }
 void Day2::calcCubesNeeded() {
     int redNeeded = (cubesNeeded.find("red")->second);
