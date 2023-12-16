@@ -73,6 +73,12 @@ build CMakeFiles/2023AOC.dir/src/Day3.cpp.o: CXX_COMPILER__2023AOC_unscanned_Deb
   OBJECT_DIR = CMakeFiles/2023AOC.dir
   OBJECT_FILE_DIR = CMakeFiles/2023AOC.dir/src
 
+build CMakeFiles/2023AOC.dir/src/Day4.cpp.o: CXX_COMPILER__2023AOC_unscanned_Debug /Users/short/CLionProjects/2023AOC/src/Day4.cpp || cmake_object_order_depends_target_2023AOC
+  DEP_FILE = CMakeFiles/2023AOC.dir/src/Day4.cpp.o.d
+  FLAGS = -g -std=gnu++2b -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/2023AOC.dir
+  OBJECT_FILE_DIR = CMakeFiles/2023AOC.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target 2023AOC
@@ -81,7 +87,7 @@ build CMakeFiles/2023AOC.dir/src/Day3.cpp.o: CXX_COMPILER__2023AOC_unscanned_Deb
 #############################################
 # Link the executable 2023AOC
 
-build 2023AOC: CXX_EXECUTABLE_LINKER__2023AOC_Debug CMakeFiles/2023AOC.dir/main.cpp.o CMakeFiles/2023AOC.dir/src/Day1.cpp.o CMakeFiles/2023AOC.dir/src/Day2.cpp.o CMakeFiles/2023AOC.dir/src/Day3.cpp.o
+build 2023AOC: CXX_EXECUTABLE_LINKER__2023AOC_Debug CMakeFiles/2023AOC.dir/main.cpp.o CMakeFiles/2023AOC.dir/src/Day1.cpp.o CMakeFiles/2023AOC.dir/src/Day2.cpp.o CMakeFiles/2023AOC.dir/src/Day3.cpp.o CMakeFiles/2023AOC.dir/src/Day4.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
   OBJECT_DIR = CMakeFiles/2023AOC.dir
   POST_BUILD = :

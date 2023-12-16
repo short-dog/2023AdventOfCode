@@ -9,4 +9,6 @@ add_executable(2023AOC main.cpp
         src/Day2.cpp
         src/Day2.h
         src/Day3.cpp
-        src/Day3.h)
+        src/Day3.h
+        src/Day4.cpp
+        src/Day4.h)
