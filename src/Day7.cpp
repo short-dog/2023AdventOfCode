@@ -38,20 +38,16 @@ void Day7::getData() {
 long assignPoint(int currentCard, long points) {
     long score = 0;
     if (currentCard > 0) {
-        //7 12 12 12 12 12
-        if (currentCard == 1) {
-            score += points * (100'000'000 * pow(0.01, cardsAccounted));
-        }else if (currentCard == 2) {
-            score += points * (100'000'000   * pow(0.01,   cardsAccounted)) + points * (1'000'000   * pow(0.01,   cardsAccounted));
-        }else if (currentCard == 3) {
-            score += points * (100'000'000   * pow(0.01,   cardsAccounted)) + points * (1'000'000   * pow(0.01,   cardsAccounted))
-            + points * (10'000   * pow(0.01,   cardsAccounted));
-        }else if (currentCard == 4) {
-            score += points * (100'000'000   * pow(0.01,   cardsAccounted)) + points * (1'000'000   * pow(0.01,   cardsAccounted))
-            + points * (10'000   * pow(0.01,   cardsAccounted)) + points * (100   * pow(0.01,   cardsAccounted));
-        }else if (currentCard == 5) {
-            score += points * (100'000'000   * pow(0.01,   cardsAccounted)) + points * (1'000'000   * pow(0.01,   cardsAccounted))
-            + points * (10'000   * pow(0.01,   cardsAccounted)) + points * (100   * pow(0.01,   cardsAccounted)) + points;
+        if (cardsAccounted == 0) {
+            score += points * 100'000'000;
+        }else if (cardsAccounted == 1) {
+            score += points * 1'000'000;
+        }else if (cardsAccounted == 2) {
+            score += points * 10'000;
+        }else if (cardsAccounted == 3) {
+            score += points * 100;
+        }else if (cardsAccounted == 4) {
+            score += points;
         }
         cardsAccounted++;
     }
@@ -124,28 +120,19 @@ void Day7::rankHand() {
             currentRank += 10000000000;
         }
         cardsAccounted = 0;
-        currentRank += assignPoint(A,14);
-        currentRank += assignPoint(K,13);
-        currentRank += assignPoint(Q, 12);
-        currentRank += assignPoint(J, 11);
-        currentRank += assignPoint(T, 10);
-        currentRank += assignPoint(nine, 9);
-        currentRank += assignPoint(eight, 8);
-        currentRank += assignPoint(seven, 7);
-        currentRank += assignPoint(six, 6);
-        currentRank += assignPoint(five, 5);
-        currentRank += assignPoint(four, 4);
-        currentRank += assignPoint(three, 3);
-        currentRank += assignPoint(two, 2);
+        for (int i = 0; i < currentHand.length(); i++) {
+            currentRank += assignPoint(currentHand[i], cardPoints.find(currentHand[i])->second);
+        }
         ranks.push_back(currentRank);
-        std::ranges::sort(ranks);
         rankMap.emplace(currentRank, i);
         currentHandTotals.clear();
     }
-    int partOneTot = 0;
+    std::ranges::sort(ranks);
+    long partOneTot = 0;
     for (int i = 0; i < ranks.size(); i++) {
         int iter = rankMap.find(ranks[i])->second;
         int bid = bids[iter];
+        std::cout << hands[iter] << " " << ranks[i] << " " << bid << std::endl;
         partOneTot += ((i+1) * bid);
     }
     std::cout << partOneTot << std::endl;
