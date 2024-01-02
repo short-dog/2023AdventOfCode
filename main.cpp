@@ -7,16 +7,19 @@
 #include <chrono>
 #include <iostream>
 
+#include "src/Day7.h"
+
 
 int main() {
     auto start = std::chrono::high_resolution_clock::now();
 
     //Day1::runDay1();
-    //Day2::runDay2();
+    // Day2::runDay2();
     //Day3::runDay3();
     //Day4::runDay4();
     //Day5::runDay5();
-    Day6::runDay6();
+    //Day6::runDay6();
+    Day7::runDay7();
 
     auto end = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
