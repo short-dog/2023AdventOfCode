@@ -42,16 +42,16 @@ void Day2::parseDataPart1() {
         while(std::getline(secondParseStream, secondStringParse, ';')){
             secondParseList.push_back(secondStringParse);
         }
-        for (int ii = 0; ii < size(secondParseList); ii++){
-            std::string thirdParse = secondParseList[ii];
+        for (int i = 0; i < size(secondParseList); i++){
+            std::string thirdParse = secondParseList[i];
             std::stringstream thirdParseStream(thirdParse);
             std::string thirdStringParse;
             while(std::getline(thirdParseStream, thirdStringParse, ',')){
                 thirdParseList.push_back(thirdStringParse);
             }
         }
-        for (int iii = 0; iii < size(thirdParseList); iii++){
-            std::string fourthParse = thirdParseList[iii];
+        for (int i = 0; i < size(thirdParseList); i++){
+            std::string fourthParse = thirdParseList[i];
             std::stringstream fourthParseStream(fourthParse);
             std::string fourthStringParse;
             while(std::getline(fourthParseStream, fourthStringParse, ' ')){
@@ -90,16 +90,16 @@ void Day2::parseDataPart2() {
         while(std::getline(secondParseStream, secondStringParse, ';')){
             secondParseList.push_back(secondStringParse);
         }
-        for (int ii = 0; ii < size(secondParseList); ii++){
-            std::string thirdParse = secondParseList[ii];
+        for (int i = 0; i < size(secondParseList); i++){
+            std::string thirdParse = secondParseList[i];
             std::stringstream thirdParseStream(thirdParse);
             std::string thirdStringParse;
             while(std::getline(thirdParseStream, thirdStringParse, ',')){
                 thirdParseList.push_back(thirdStringParse);
             }
         }
-        for (int iii = 0; iii < size(thirdParseList); iii++){
-            std::string fourthParse = thirdParseList[iii];
+        for (int i = 0; i < size(thirdParseList); i++){
+            std::string fourthParse = thirdParseList[i];
             std::stringstream fourthParseStream(fourthParse);
             std::string fourthStringParse;
             while(std::getline(fourthParseStream, fourthStringParse, ' ')){
